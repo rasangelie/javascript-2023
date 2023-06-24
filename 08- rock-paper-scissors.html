@@ -30,15 +30,31 @@
             score.wins = 0;
             score.losses = 0;
             score.ties = 0;
+            localStorage.removeItem('score');
             ">
             Reset Score
         </button>
 
         <script>
 
-            const score = JSON.parse(localStorage.getItem('score'));
+            let score = JSON.parse(localStorage.getItem('score')) || {
+                    wins: 0,
+                    losses: 0,
+                    ties: 0
+            };
 
-            //instead of always 0, we can parse it back into JS object and use it in the score
+            //we can also use !score here and default operator on the top.
+            /*if (score === null) {
+                score = {
+                    wins: 0,
+                    losses: 0,
+                    ties: 0
+                }
+            }
+
+            */
+
+            //instead of always 0, we can parse it back into JS object and use it in the score. **para dili mag start og 0 if i refresh
 
             //console.log(JSON.parse(localStorage.getItem('score')));
 

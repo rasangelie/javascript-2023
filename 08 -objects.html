@@ -58,6 +58,40 @@
 
             const jsonString = JSON.stringify(product2);
             console.log(JSON.parse(jsonString));
+
+
+            //destructuring shortcut (object shortcut)
+            const object1 = {
+                message: 'Good morning!'
+            };
+
+            //creating a variable with the same name of property
+            // const message = object1.message;
+
+            //is the same with
+            const { message } = object1;
+
+            //shorthand property
+
+            const object2 = {
+                // message: message
+                message,
+                
+                /*method: function function1() {
+                    console.log('method');
+                }
+                */
+               //shorthand method of above
+
+                method() {
+                    console.log('method');
+                }
+
+            }
+
+            console.log(object2);
+            object2.method();
+
         </script>
     </body>
 </html>
