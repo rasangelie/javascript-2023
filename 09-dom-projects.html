@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> DOM Projects</title>
+    </head>
+    <body>
+        <p><b>YouTube Subscribe Button</b></p>
+
+        <button onclick="subscribe()" class =               "js-subscribe-button" style="margin-bottom: 30px;">
+            Subscribe
+        </button>
+
+        
+
+        <p><b>Rock Paper Scissors</b></p>
+
+        <a href="09-rock-paper-scissors.html" target="_blank" >     
+            Click Here 
+        </a>
+
+        
+        <p class="js-amazon" style="margin-top: 30px;">
+            <b>Amazon Shipping Calculator</b>
+        </p>
+
+        <p> Orders under $40 = +$10 shipping. </p>
+        <p> Orders over $40 = FREE shipping. </p>
+
+        <input type="text" placeholder="Cost of order" class="js-cost-input">
+        <button onclick="calculateTotal()" class="js-calculate">Calculate</button>
+
+        <p class="js-order-cost"></p>
+
+
+        <script>
+            
+            function subscribe() {
+                const buttonElement = document.querySelector('.js-subscribe-button');
+            
+                if (buttonElement.innerText === 'Subscribe') {
+                    buttonElement.innerHTML = 'Subscribed';
+
+                } else {
+                    buttonElement.innerHTML = 'Subscribe';
+                }
+
+            }
+
+            function calculateTotal() {
+                const inputElement = document.querySelector('.js-cost-input');
+
+                let cost = Number(inputElement.value);
+                // console.log(typeof cost);
+                
+                if (cost < 40) {
+                    cost += 10;
+                    //console.log(cost);
+
+                } else {
+                    cost;
+                }
+
+                document.querySelector('.js-order-cost')
+                    .innerHTML = `$${cost}`;
+            }
+
+        </script>
+    </body>
+</html>
