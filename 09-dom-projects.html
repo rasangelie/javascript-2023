@@ -38,6 +38,9 @@
 
         <script>
             
+            // window.document
+            // window.console.log('window');
+
             function subscribe() {
                 const buttonElement = document.querySelector('.js-subscribe-button');
             
@@ -59,19 +62,19 @@
             function calculateTotal() {
                 const inputElement = document.querySelector('.js-cost-input');
 
-                let cost = Number(inputElement.value);
-                // console.log(typeof cost);
+                let cost = Number(inputElement.value) * 100;
+                console.log(cost);
                 
-                if (cost < 40) {
-                    cost += 10;
-                    //console.log(cost);
+                if (cost < 4000) {
+                    cost += 1000;
+                    console.log(cost);
 
                 } else {
                     cost;
                 }
 
                 document.querySelector('.js-order-cost')
-                    .innerHTML = `$${cost}`;
+                    .innerHTML = `$${cost/100}`;
             }
 
         </script>
