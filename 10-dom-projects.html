@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles\dom-project-style.css">
+        <link rel="stylesheet" href="styles\10-dom-project-style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-        <title> DOM Projects</title>
+        <title>10-DOM Projects</title>
     </head>
     <body>
         <p><b>YouTube Subscribe Button</b></p>
@@ -30,7 +30,7 @@
         <input type="text" placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="handleCostKeydown(event)">
 
         <button onclick="calculateTotal()" class="js-calculate calculate-button">Calculate</button>
-
+        <p class="error-message error"></p>
         <p class="js-order-cost"></p>
 
 
@@ -69,11 +69,22 @@
 
             function calculateTotal() {
                 const inputElement = document.querySelector('.js-cost-input');
+                
 
                 let cost = Number(inputElement.value) * 100;
                 console.log(cost);
                 
+                if (cost < 0) {
+                    document.querySelector('.error-message')
+                        .innerHTML = 'Error: cost cannont be less than $0';
+
+                    return;
+            
+                }
+
                 if (cost < 4000) {
+                    document.querySelector('.error-message')
+                        .innerHTML= '';
                     cost += 1000;
                     console.log(cost);
 
