@@ -76,7 +76,7 @@
 
             */
 
-            const numbers = [1, 1, 3];
+            /*const numbers = [1, 1, 3];
             let total = 0; //accumulator variable
             
 
@@ -95,8 +95,49 @@
             }
 
             console.log(numDoubled);
+            */
 
+            //Arrays are references
 
+            const array1 = [1, 2, 3];
+            const array2= array1;
+            array2.push(5);
+            console.log(array1);
+            console.log(array2);
+
+            //To avoid- we can create a copy of value using .slice()
+            const array3 = array2.slice();
+            array3.push(9);
+            console.log(array3);
+
+            //Destructuring
+            const [firstValue, secondValue, ] = [2, 4, 6, 8];
+
+            //Loops
+
+            for (let i= 0; i <= 10; i++) {
+
+                if (i % 3 === 0) {
+                    continue;
+                }
+
+                console.log(i);
+
+                if (i === 8) {
+                    break;
+                }
+            }
+
+            let i = 1;
+
+            while (i <= 10) {
+                if (i % 3 === 0) {
+                    i++ //always use the increment step manually in while loop
+                    continue;
+                }
+                console.log(i);
+                i++
+            }
         </script>
     </body>
 </html>
