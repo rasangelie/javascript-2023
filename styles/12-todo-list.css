@@ -1,0 +1,42 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.new, .delete-button{
+    text-align: center;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+
+
+.delete-button {
+    background-color: darkred;
+    padding: 10px 10px;
+    
+}
+
+
+input {
+    padding: 10px;
+}
+
+.todo-grid, .todo-input-grid {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.todo-input-grid {
+    align-items: stretch;
+}
+
+.name-input,
+.due-date-input {
+    font-size: 14px;
+}

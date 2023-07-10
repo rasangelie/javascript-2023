@@ -1,0 +1,53 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(26, 26, 26);
+
+}
+
+p {
+    color: white;
+    font-weight: 400;
+    
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+
+button {
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 25px;    
+}
+
+.image-button {
+    border: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.move-icon {
+    height: 60px;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.reset,
+.auto-play-button {
+    margin-top: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+
+}
+
+.score {
+    margin-top: 50px;
+}
