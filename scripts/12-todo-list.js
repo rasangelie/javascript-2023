@@ -70,6 +70,7 @@ function renderTodoList() {
     document.querySelectorAll('.js-delete-button')
         .forEach((deleteButton, index) => {
             deleteButton.addEventListener('click', () => {
+                console.log(index);
                 todoList2.splice(index, 1);
                 renderTodoList();
             });

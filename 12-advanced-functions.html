@@ -8,7 +8,7 @@
     <body>
         <button onclick="" class="js-button">Click</button>
         <script>
-            const buttonElement = document.querySelector('.js-button');
+            /*const buttonElement = document.querySelector('.js-button');
 
             // const eventListener = () => {
             //     console.log('clicked');
@@ -25,6 +25,8 @@
             buttonElement.addEventListener('click', () => {
                 console.log('click 2');
             });
+
+            */
 
             /*
             function greeting() {
@@ -142,6 +144,24 @@
                 console.log(value);
             });
             */
+
+
+
+            console.log([1, -3, 5].filter((value, index) => {
+                if (value >= 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+                
+            }));
+
+
+            //maps - we want to double the array
+
+            console.log([1, 1, 3].map((value, index) => {
+                return value * 2;
+            }));
         </script>
         
 
