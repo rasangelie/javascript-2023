@@ -11,6 +11,15 @@
             Start
         </button>
 
+        <div style="margin-top: 20px;">
+            <button onclick="displayMessage()">
+                Add to cart
+            </button>
+
+            <p class="displayMessage"></p>
+        </div>
+        
+
         <script>
             //12a
             const add = function() {
@@ -24,9 +33,25 @@
             //12c and 12d
             function start(){
                 setTimeout(function(){
-                    document.querySelector('.change').innerHTML = 'Finished!';
+                    document.querySelector('.change')
+                        .innerHTML = 'Finished!';
                 }, 1000)
                 document.querySelector('.change').innerHTML = 'Loading....';
+            }
+
+            //12e
+            function displayMessage() {
+                document.querySelector('.displayMessage').innerHTML = 'Added';
+               
+                
+
+                setTimeout(function(){
+                    document.querySelector('.displayMessage').innerHTML = '';
+                }, 2000);
+
+                
+                
+
             }
 
         </script>

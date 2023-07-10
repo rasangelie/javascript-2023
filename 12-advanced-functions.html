@@ -6,7 +6,26 @@
         <title>Advanced Functions</title>
     </head>
     <body>
+        <button onclick="" class="js-button">Click</button>
         <script>
+            const buttonElement = document.querySelector('.js-button');
+
+            // const eventListener = () => {
+            //     console.log('clicked');
+            // };
+            
+            const eventListener = () => {
+                console.log('click');
+            };
+            
+            buttonElement.addEventListener('click', eventListener());
+
+            buttonElement.removeEventListener('click', eventListener());
+
+            buttonElement.addEventListener('click', () => {
+                console.log('click 2');
+            });
+
             /*
             function greeting() {
                 console.log('hello');
@@ -69,6 +88,7 @@
             }, 3000); //function we want to run in the future, 
             */
 
+            /*
             //Another way to loop through an array
 
             [
@@ -83,7 +103,45 @@
                 console.log(index);
                 console.log(value);
             });
-        
+            */
+
+            /*
+            const regularFunction = function(param, param2) {
+                console.log('hello')
+            };
+
+
+            const arrowFunction = (param, param2) => {
+                console.log('hello');
+            };
+            arrowFunction()
+
+            //another way
+            const oneParam = param => {
+                console.log(param + 1)
+            };
+            oneParam(2);
+
+            //one line
+
+            const oneLine = () => 2 + 2;
+            console.log(oneLine());
+
+
+            //
+            [
+                'make dinner',
+                'wash dishes',
+                'watch youtube'
+            ].forEach((value, index) => { //we can also add a second parameter which is the index
+
+                if (value === 'wash dishes') {
+                    return;
+                }
+                console.log(index);
+                console.log(value);
+            });
+            */
         </script>
         
 

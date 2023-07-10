@@ -16,6 +16,13 @@ const todoList2 = [{
     dueDate: '2023-07-08'
     }];
 
+
+document.querySelector('.js-add-todo-button')
+    .addEventListener('click', () => {
+        addTodoList()
+    });
+
+
 function addTodoList() {
     const inputs = document.querySelector('.js-name-input2');
     const inputVal = inputs.value;
@@ -39,7 +46,7 @@ function renderTodoList() {
     let todoListHTML = '';
 
 
-    todoList2.forEach(function(valObject, index) {
+    todoList2.forEach((valObject, index) => {
 
         //destructuring
         const { name, dueDate } = valObject;
@@ -47,9 +54,7 @@ function renderTodoList() {
             <div> ${name} </div>
             <div> ${dueDate} </div>
                 
-            <button onclick="
-            todoList2.splice(${index}, 1);
-            renderTodoList();" class="delete-button">
+            <button class="delete-button js-delete-button">
                 Delete
             </button> 
             `;
@@ -57,9 +62,18 @@ function renderTodoList() {
     })
 
     // console.log(todoListHTML);
+
     //Show the user todo list to the webpage
     document.querySelector('.task-container')
         .innerHTML = todoListHTML;
+    
+    document.querySelectorAll('.js-delete-button')
+        .forEach((deleteButton, index) => {
+            deleteButton.addEventListener('click', () => {
+                todoList2.splice(index, 1);
+                renderTodoList();
+            });
+        });
 
     // console.log(todoList)
 }
